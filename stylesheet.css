@@ -1,0 +1,128 @@
+:root {
+	--BGColor: #e5eff9;
+	--FontColor: #1e5083;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	display: block;
+	background-color: #80aedd;
+	font-family: Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+header {
+	backdrop-filter: blur(10px);
+	padding: 2px;
+	width: 100%;
+	height: fit-content;
+	left: 0;
+	top: 0;
+	position: fixed;
+	display: none;
+}
+
+@keyframes show-bg-img{
+	from {filter: blur(10px)}
+	to {filter: none}
+}
+
+#bg-img {
+	display: block;
+	background-attachment: fixed;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(0px);
+	height: 100%;
+	left: 0;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+	/*background- image: url(https://bing.com/th?id=OHR.Kinkakuji_ZH-CN8643828412_1920x1080.jpg);*/
+	animation-name: show-bg-img;
+	animation-fill-mode: forwards;
+	animation-duration: 2s;
+}
+
+#mask {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+#MainArticle {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	min-height: 100%;
+	padding: 30px;
+	font-size: 14px;
+	font-family: Calibri, Arial;
+	/* padding-top: 10%;
+	padding-bottom: 10%; */
+	background-color: var(--BGColor);
+}
+
+footer {
+	background-color: #ffffff;
+	color: #333333;
+	padding: 3px;
+	width: 100%;
+	display: block;
+	font-size: 15px;
+	text-align: center;
+}
+
+@keyframes show-h1 {
+	from {color: #FFFFFF00}
+	to {color: #03203e;}
+}
+
+h1 {
+	display: block;
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	padding: 20px;
+	color: #03203e;
+	text-align: center;
+	font-size: 50px;
+	font-family: "PingFang SC", "Microsoft Yahei", "Arial", "sans-serif";
+	
+	transition: backdrop-filter 0.5s;
+
+	animation-name: show-h1;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+h1:hover {
+	backdrop-filter: blur(10px);
+}
+
+h2 {
+	padding: 20px;
+	font-size: 30px;
+}
+
+p {
+	padding: 7px;
+	color: #000000;
+	text-align: center;
+}
+
+a {
+	color: var(--FontColor);
+	text-decoration: none;
+}
+
+/* a:hover {
+	color: var(--FontColor);
+} */
